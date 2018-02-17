@@ -1,4 +1,4 @@
-import instagram from './instapi';
+import reddit from './redditapi';
 
 const searchInput = document.getElementById('search-input');
 const form = document.getElementById('form');
@@ -12,8 +12,8 @@ form.addEventListener('submit', e => {
     // Clear input
     searchInput.value = '';
 
-    // Search instagram
-    instagram.search(searchstr)
+    // Search reddit
+    reddit.search(searchstr)
     .then(results => {
         let output = '<div class ="row"><div class="col">';
         results.forEach(post => {
